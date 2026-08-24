@@ -1,0 +1,165 @@
+h1{
+    color: coral;
+}
+
+.primero{
+    color: red;
+}
+
+#segundo{
+    color: green;
+}
+
+h2, h3{
+    color: aqua;
+}
+
+.contenedor h1{
+    color: darkred;
+}
+
+h1{
+    color: black !important;
+}
+
+html{
+    height: 100%;
+}
+
+.header{
+    background-color: blue;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+.nav{
+    display: flex;
+    gap: 24px;
+}
+
+.nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 1s;
+}
+
+.nav a:hover{
+    color: rgb(104, 255, 10);
+}
+
+body{
+    margin: 0;
+}
+
+/* 1 rem  = 16px */
+
+/* html{
+    font-size: 25px;
+} */
+
+.contenedorPixel{
+    border: 1px black solid;
+    width: 200px;
+    margin-left: 25px;
+    padding-left: 25px;
+}
+
+.contenedorRem{
+    border: 1px black solid;
+    width: 12.5rem;
+}
+
+
+.footer{
+    background-color: blue;
+    color: white;
+    padding: 1.5rem 2rem;
+    margin-top: auto;
+}
+
+.footer-contenido{
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer p{
+    font-size: 15px;
+    margin: 0;
+}
+
+.footer-nav{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.footer-nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 1s;
+}
+
+.footer-nav a:hover{
+    color: rgba(255, 0, 255, 0.752);
+}
+
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    border: 1px black solid;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    border-radius: 1rem;
+    background-color: aqua;
+    
+}
+
+.card img{
+    height: 200px;
+    width: 100px;
+}
+
+.contenedor-btn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btnVer{
+    background-color: green;
+    height: 25px;
+    width: 50px;
+    color: white;
+    border-radius: 1rem;
+}
+
+.btnComprar{
+    background-color: red;
+    height: 25px;
+    width: 70px;
+    color: white;
+    border-radius: 1rem;
+
+}
