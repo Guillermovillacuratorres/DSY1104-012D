@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header></header>
+
+    <main>
+        <section id="formulario">
+            <div class="container">
+                <h2>Datos personales</h2>
+                <form action="#">
+                    <div class="row">
+
+
+                        <div class="col-6 mt-3">
+                            <label for="txtNombre">Nombre:</label>
+                            <input id="txtNombre" class="form-control" type="text" placeholder="Ingrese su nombre">
+                        </div>
+
+
+                        <div class="col-6 mt-3">
+                            <label for="txtApellido">Apellido:</label>
+                            <input id="txtApellido" class="form-control" type="text" placeholder="Ingrese su apellido">
+                        </div>
+
+
+
+                        <div class="col-9 mt-3">
+                            <label for="txtDireccion">Dirección:</label>
+                            <input maxlength="2" id="txtDireccion" class="form-control" type="text" placeholder="Ingrese su dirección">
+                        </div>
+
+
+<!--  -->
+                        <div class="col-3 mt-3">
+                            <label for="txtEdad">Edad:</label>
+                            <input id="txtEdad" class="form-control" type="number" placeholder="Ingrese su edad">
+                        </div>
+
+
+
+                        <div class="contenedor-btn mt-3">
+                            <button onclick="guardar()" class="btn btn-primary">Guardar</button>
+                        </div>
+
+
+
+                    </div>
+                </form>
+            </div>
+        </section>
+
+
+        <section id="ver-data">
+            <div class="contenedor-data">
+                <h3>Nombre: </h3>
+                <label for="">Juanito</label>
+            </div>
+        </section>
+
+
+    </main>
+
+
+    <footer></footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="function.js"></script>
+</body>
+
+</html>

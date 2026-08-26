@@ -1,0 +1,13 @@
+.contenedor-btn{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.contenedor-data{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 200px;
+}
+
