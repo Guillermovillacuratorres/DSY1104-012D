@@ -4,6 +4,7 @@ import estilos  from "./inicio.module.css";
 
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import App_navbar from '../../components/navbar/navbar';
 
 
 function guardar() {
@@ -40,6 +41,7 @@ function Inicio() {
 
     return(
         <>
+        <App_navbar/>
             <h1 className={`${estilos.tamanio} negrita`}>Hooola</h1>
              <div className="row">
                 <div className="col-5">
