@@ -9,3 +9,9 @@ h1{
 .negrita{
     font-weight: bolder;
 }
+
+.image{
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 1.5rem;
+}

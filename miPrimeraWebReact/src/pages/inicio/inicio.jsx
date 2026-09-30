@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import './inicio.module.css'
 import estilos  from "./inicio.module.css";
 
@@ -29,6 +30,14 @@ function BasicExample() {
 
 
 function Inicio() {
+  const navigate = useNavigate();
+
+
+  function irNosotros() {
+    var parametro = 50;
+    navigate(`/nosotros/${parametro}`);
+  }
+
     return(
         <>
             <h1 className={`${estilos.tamanio} negrita`}>Hooola</h1>
@@ -39,11 +48,11 @@ function Inicio() {
                 </div>
 
                 <div className="col-3">
-                    <button onClick={guardar} className='btn btn-warning'>Guardar</button>
+                    <button onClick={irNosotros} className='btn btn-warning'>Guardar</button>
                 </div>
 
                 <div className="col-4">
-                    <img width={300} src="/src/assets/img/tortuga.webp" alt="" />
+                    <img className={estilos.image} src="/src/assets/img/tortuga.webp" alt="" />
                 </div>
 
              </div>
