@@ -1,0 +1,27 @@
+@url_base=54.82.42.166
+@token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjaGFvIiwiaWF0IjoxNzkzODI4Mjc3LCJleHAiOjE3OTM4MjkxNzd9.IxgDLe07auD7HY1v9knsKBZZp4np2FIseVaDWMfr8_c
+
+###Login
+POST http://{{url_base}}/auth/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "chao",
+    "password": "chao"
+}
+
+###Registro de usuario
+POST http://{{url_base}}/auth/registro HTTP/1.1
+content-type: application/json
+
+{
+    "username": "chao",
+    "password": "chao"
+}
+
+
+
+###Obtener todos los vehiculos
+GET http://{{url_base}}/vehiculo HTTP/1.1
+Authorization: Bearer {{token}}
+content-type: application/json
