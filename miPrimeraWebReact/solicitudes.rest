@@ -1,5 +1,5 @@
-@url_base=54.82.42.166
-@token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjaGFvIiwiaWF0IjoxNzkzODI4Mjc3LCJleHAiOjE3OTM4MjkxNzd9.IxgDLe07auD7HY1v9knsKBZZp4np2FIseVaDWMfr8_c
+@url_base=98.84.136.196
+@token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjaGFvIiwiaWF0IjoxNzkzOTEyMTc1LCJleHAiOjE3OTM5MTMwNzV9.0WiFBpbY_pKPyBI8vpFkvyTPwEFZ5geOepU2iQikN4E
 
 ###Login
 POST http://{{url_base}}/auth/login HTTP/1.1

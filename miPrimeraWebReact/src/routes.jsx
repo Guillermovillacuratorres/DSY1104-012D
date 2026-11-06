@@ -2,11 +2,18 @@ import { createBrowserRouter } from "react-router-dom";
 import Inicio from "./pages/inicio/inicio";
 import Nosotros from "./pages/nosotros/nosotros";
 import Formulario from "./pages/formulario/formulario";
+import Login from "./pages/login/login";
+import RutaProtegida from "./components/rutaProtegida/rutaProtegida";
+import VehiculosView from "./pages/agregarAuto/agregarAuto";
 
 export const routes = createBrowserRouter([
     {
         path:"/",
-        element:<Inicio/>
+        element:<RutaProtegida> <Inicio/> </RutaProtegida>
+    },
+    {
+        path:"/vehiculo",
+        element:<RutaProtegida> <VehiculosView/> </RutaProtegida>
     },
     {
         path:"/nosotros/:idMascota",
@@ -15,7 +22,12 @@ export const routes = createBrowserRouter([
     {
         path:"/formulario",
         element:<Formulario/>
+    },
+    {
+        path:"/login",
+        element:<Login/>
     }
+
 ]);
 
 
