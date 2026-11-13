@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { obtenerVehiculos } from '../../api/vehiculoApi';
+import { agregarVehiculo, eliminarVehiculo, obtenerVehiculos } from '../../api/vehiculoApi';
 import { obtenerCategporias } from '../../api/categoriaApi';
+import App_navbar from '../../components/navbar/navbar';
+import { useNavigate } from 'react-router-dom';
 
 export default function VehiculosView() {
+  const navigate = useNavigate();
+
   // Lista de categorías predefinidas para el select
   const categoriasDisponibles = [
     { idCategoria: 1, nombreCategoria: "camion" },
@@ -60,38 +64,41 @@ export default function VehiculosView() {
     }
   };
 
-  // Función async para agregar un vehículo (sin <form>)
-  const agregarVehiculo = async () => {
-    // Validación básica
-    if (!marca || !color || !idCategoria) {
-      alert("Por favor completa todos los campos y selecciona una categoría.");
+  async function agregarAuto() {
+    if (marca.length == 0) {
+      alert("La marca no debe estar vacia.");
       return;
     }
-
-
-
-
-
-
-
-    // Limpiamos los campos
-    setMarca('');
-    setColor('');
-    setIdCategoria('');
-    setNombreCategoria('');
-  };
+    const auto = {
+      marca:marca,
+      color:color,
+      categoria: {idCategoria: Number(idCategoria)}
+    }
+    try{
+      await agregarVehiculo(auto);
+    }catch(error){
+      console.log("Error al agregar el vehiculo.");
+    }
+  }
 
 
   function editar(auto){
     console.log("OBJ COMPLETO ---> ",auto);
-    
+    navigate("/editarVehiculo/"+ auto.idVehiculo);
   }
 
   function eliminar(auto){
-
+    console.log("OBJ COMPLETO ---> ",auto);
+    try {
+      eliminarVehiculo(auto.idVehiculo);
+    } catch (error) {
+      console.log("Error al eliminar", error); 
+    }
   }
 
   return (
+    <>
+    <App_navbar/>
     <div className="container mt-5 mb-5">
       <h2 className="text-center mb-4">Gestión de Vehículos</h2>
 
@@ -141,7 +148,7 @@ export default function VehiculosView() {
             <button
               type="button"
               className="btn btn-primary w-100"
-              onClick={agregarVehiculo}
+              onClick={agregarAuto}
             >
               Registrar Vehículo
             </button>
@@ -191,5 +198,6 @@ export default function VehiculosView() {
         </div>
       </div>
     </div>
+    </>
   );
 }

@@ -5,6 +5,7 @@ import Formulario from "./pages/formulario/formulario";
 import Login from "./pages/login/login";
 import RutaProtegida from "./components/rutaProtegida/rutaProtegida";
 import VehiculosView from "./pages/agregarAuto/agregarAuto";
+import EditarVehiculo from "./pages/editarAuto/editarAuto";
 
 export const routes = createBrowserRouter([
     {
@@ -14,6 +15,10 @@ export const routes = createBrowserRouter([
     {
         path:"/vehiculo",
         element:<RutaProtegida> <VehiculosView/> </RutaProtegida>
+    },
+    {
+        path:"/editarVehiculo/:idAuto",
+        element:<RutaProtegida> <EditarVehiculo/> </RutaProtegida>
     },
     {
         path:"/nosotros/:idMascota",

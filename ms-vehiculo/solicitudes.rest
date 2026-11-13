@@ -1,0 +1,91 @@
+### ===== AUTH =====
+# Copia el token que devuelve /auth/login en la variable de abajo (dura 15 minutos)
+@token = PEGAR_TOKEN_AQUI
+
+### Registrar usuario
+POST http://localhost:8080/auth/registro HTTP/1.1
+content-type: application/json
+
+{
+    "username": "admin",
+    "password": "admin123"
+}
+
+### Login (devuelve el token)
+POST http://localhost:8080/auth/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "admin",
+    "password": "admin123"
+}
+
+
+### ===== CATEGORIA =====
+
+### Listar categorias
+GET http://localhost:8080/categoria HTTP/1.1
+Authorization: Bearer {{token}}
+
+### Obtener categoria por id
+GET http://localhost:8080/categoria/1 HTTP/1.1
+Authorization: Bearer {{token}}
+
+### Crear categoria
+POST http://localhost:8080/categoria HTTP/1.1
+Authorization: Bearer {{token}}
+content-type: application/json
+
+{
+    "nombreCategoria": "SUV"
+}
+
+### Actualizar categoria
+PUT http://localhost:8080/categoria/1 HTTP/1.1
+Authorization: Bearer {{token}}
+content-type: application/json
+
+{
+    "nombreCategoria": "Sedan"
+}
+
+### Eliminar categoria
+DELETE http://localhost:8080/categoria/1 HTTP/1.1
+Authorization: Bearer {{token}}
+
+
+### ===== VEHICULO =====
+
+### Listar vehiculos
+GET http://localhost:8080/vehiculo HTTP/1.1
+Authorization: Bearer {{token}}
+
+### Obtener vehiculo por id
+GET http://localhost:8080/vehiculo/1 HTTP/1.1
+Authorization: Bearer {{token}}
+
+### Crear vehiculo
+POST http://localhost:8080/vehiculo HTTP/1.1
+Authorization: Bearer {{token}}
+content-type: application/json
+
+{
+    "marca": "Toyota",
+    "color": "Rojo",
+    "categoria": { "idCategoria": 1 }
+}
+
+### Actualizar vehiculo
+PUT http://localhost:8080/vehiculo/1 HTTP/1.1
+Authorization: Bearer {{token}}
+content-type: application/json
+
+{
+    "marca": "Toyota",
+    "color": "Azul",
+    "categoria": { "idCategoria": 1 }
+}
+
+### Eliminar vehiculo
+DELETE http://localhost:8080/vehiculo/1 HTTP/1.1
+Authorization: Bearer {{token}}
